@@ -1,3 +1,26 @@
 /*
-  Cache-Control: no-cache
   X-Robots-Tag: noindex, nofollow
+
+/
+  Cache-Control: no-cache
+
+/images/*
+  Cache-Control: public, max-age=86400
+
+/product/images/*
+  Cache-Control: public, max-age=86400
+
+/brand/*
+  Cache-Control: public, max-age=86400
+
+/custom-assets/*
+  Cache-Control: public, max-age=86400
+
+/flags/*
+  Cache-Control: public, max-age=86400
+
+/catalogue/images/*
+  Cache-Control: public, max-age=86400
+
+/fonts/*
+  Cache-Control: public, max-age=604800
