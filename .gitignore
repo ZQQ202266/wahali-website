@@ -1,0 +1,14 @@
+# Credentials and local state
+.env
+.env.*
+!.env.example
+.wrangler/
+node_modules/
+.DS_Store
+._*
+.Trashes/
+*.log
+# Generated print source is local; retain the matching PDF and manifest.
+dist/catalogue-print.html
+# Hosting identity belongs to the original preview platform.
+.openai/hosting.json

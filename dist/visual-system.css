@@ -1,0 +1,50 @@
+/* WAHALI customer-facing visual system. Load last on every customer page.
+   Avenir Next is a system font; Inter is the bundled cross-platform fallback.
+   Use Manrope for headings. Barlow Condensed 600 belongs only to homepage banners. */
+@font-face{font-family:Manrope;src:url('fonts/manrope-400.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Manrope;src:url('fonts/manrope-500.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:Manrope;src:url('fonts/manrope-600.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:Inter;src:url('fonts/inter-variable-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:Inter;src:url('fonts/inter-variable-latin-ext.woff2') format('woff2');font-weight:100 900;font-display:swap}
+:root{--wahali-ui:'Avenir Next','Avenir Next LT Pro',Inter,Arial,sans-serif;--wahali-heading:Manrope,'Avenir Next',Inter,Arial,sans-serif;--wahali-paper:#FAF8F4;--wahali-surface:#FFFDF9;--wahali-ink:#373930;--wahali-muted:#68655F;--wahali-line:#E3DED4;--wahali-action:#383B32;--wahali-hover:#51564A;--wahali-radius:6px;--wahali-body:15px;--wahali-page:36px;--wahali-section:28px;--wahali-card:15px;--wahali-reference:12px}
+body.wahali-ui{font-family:var(--wahali-ui)!important;font-size:var(--wahali-body);font-weight:400;line-height:1.7;font-synthesis:none;-webkit-font-smoothing:antialiased}
+body.wahali-ui :is(button,input,textarea,select){font-family:var(--wahali-ui)!important}
+body.wahali-ui :is(h1,h2,h3,h4){font-family:var(--wahali-heading)!important;font-weight:500!important;letter-spacing:-.025em!important}
+body.wahali-ui h1{font-size:var(--wahali-page)!important;line-height:1.2!important}
+body.wahali-ui h2{font-size:var(--wahali-section)!important;line-height:1.3!important}
+body.wahali-ui h3{font-size:16px!important;line-height:1.5!important}
+body.wahali-ui :is(.card,.home-edit-product,.cl-card,.pd-look-card,.product-info) h3{font-family:var(--wahali-ui)!important;font-size:var(--wahali-card)!important;font-weight:500!important;letter-spacing:0!important;line-height:1.5!important}
+body.wahali-ui :is(.sku,.edit-product-code,.cl-card-reference,.pd-reference){font-family:var(--wahali-ui)!important;font-size:var(--wahali-reference)!important;font-weight:400;line-height:1.6!important;letter-spacing:0!important}
+body.wahali-ui :is(.eyebrow,.home-kicker,.section-label,.pd-kicker){font-family:var(--wahali-ui)!important;font-size:11px!important;font-weight:500!important;line-height:1.5!important;letter-spacing:.12em!important}
+body.wahali-ui :is(.mega-trigger,.site-header .navlinks a){font-family:var(--wahali-ui)!important;font-size:13px!important;font-weight:500!important;line-height:1.5!important;letter-spacing:.06em!important;text-transform:uppercase}
+body.wahali-ui .mega-panel .mega-column>h3{font-family:var(--wahali-ui)!important;font-size:11px!important;letter-spacing:.11em!important;line-height:1.5!important}
+body.wahali-ui .mega-panel .mega-column>a{font-family:var(--wahali-ui)!important;font-size:14px!important;font-weight:400;line-height:1.6!important;letter-spacing:0!important}
+body.wahali-ui .btn{font-family:var(--wahali-ui)!important;font-size:13px!important;font-weight:500!important;line-height:1.5!important;letter-spacing:.015em!important;border-radius:var(--wahali-radius);background:var(--wahali-action);color:var(--wahali-surface);border-color:var(--wahali-action)}
+body.wahali-ui .btn:is(.light,.outline){background:transparent;color:var(--wahali-ink);border-color:var(--wahali-line)}
+body.wahali-ui .btn:hover{background:var(--wahali-hover);color:var(--wahali-surface)}
+body.wahali-ui .btn:is(.light,.outline):hover{background:#EDE7DE;color:var(--wahali-ink)}
+body.wahali-ui :is(.product-add-cta,.text-button,.text-btn){font-family:var(--wahali-ui)!important;font-size:13px!important;font-weight:500;letter-spacing:0;line-height:1.5}
+body.wahali-ui :is(.view-all-pill,.shop-look-button){font-family:var(--wahali-ui)!important;font-size:11px!important;font-weight:600!important;letter-spacing:.1em!important;line-height:1.4!important}
+body.wahali-ui :is(.footer-column,.site-footer .footer-column)>h3{font-family:var(--wahali-ui)!important;font-size:11px!important;font-weight:500!important;letter-spacing:.1em!important;line-height:1.5!important}
+body.wahali-ui :is(.footer-column a,.footer p,.footer small){font-family:var(--wahali-ui)!important;font-size:13px;line-height:1.7}
+body.wahali-ui :is(.form-label,.pd-option-title,.field-label){font-size:13px;font-weight:500}
+body.wahali-ui :is(input,textarea,select){font-size:14px;line-height:1.5}
+body.wahali-ui :is(dialog h2,#selection-dialog h3,.dialog-top h3){font-family:var(--wahali-heading)!important;font-size:24px!important;line-height:1.3!important;letter-spacing:-.025em!important}
+body.wahali-ui .pd-copy h1{font-size:28px!important;line-height:1.25!important}
+body.wahali-ui .pd-section-heading h2{font-size:var(--wahali-section)!important}
+body.wahali-ui .hero h1,html:not([lang=zh-CN]) body.wahali-ui .hero h1{font-family:var(--wahali-heading)!important;font-size:clamp(36px,4vw,56px)!important;font-weight:500!important;line-height:1.12!important;letter-spacing:-.03em!important}
+body.wahali-ui[data-page=home] :is(.b-fashion-copy,.visual-copy,.directory-intro,.hero-copy)>h1{font-family:'Barlow Condensed',var(--wahali-heading)!important;font-weight:600!important;letter-spacing:-.012em!important}
+body.wahali-ui.inquiry-catalogue{background:var(--wahali-paper);color:var(--wahali-ink)}
+body.wahali-ui.inquiry-catalogue :is(header,.selection-bar,dialog){background:var(--wahali-surface);border-color:var(--wahali-line);color:var(--wahali-ink)}
+body.wahali-ui.inquiry-catalogue .card{border-color:var(--wahali-line);border-radius:var(--wahali-radius)}
+body.wahali-ui.inquiry-catalogue .card.chosen{border-color:var(--wahali-action)}
+body.wahali-ui.inquiry-catalogue .photo{border-radius:var(--wahali-radius)}
+body.wahali-ui.inquiry-catalogue .filters button.active{background:var(--wahali-action);border-color:var(--wahali-action)}
+body.wahali-ui.inquiry-catalogue .logo{font-family:var(--wahali-ui)!important}
+@media(max-width:650px){:root{--wahali-page:28px;--wahali-section:24px}body.wahali-ui .pd-copy h1{font-size:25px!important}body.wahali-ui :is(.mega-trigger,.site-header .navlinks a){font-size:11px!important;letter-spacing:.035em!important}body.wahali-ui :is(input,select,textarea){font-size:16px}body.wahali-ui :is(dialog h2,#selection-dialog h3,.dialog-top h3){font-size:22px!important}body.wahali-ui .hero h1,html:not([lang=zh-CN]) body.wahali-ui .hero h1{font-size:36px!important}}
+
+/* Final component roles win over historical page-specific rules. */
+html body.wahali-ui .pd-page .pd-recommend-grid .card h3{font-family:var(--wahali-ui)!important;font-size:15px!important;font-weight:500!important;letter-spacing:0!important}
+html body.wahali-ui .pd-page .pd-look-card h3{font-family:var(--wahali-ui)!important;font-size:15px!important;letter-spacing:0!important}
+html body.wahali-ui.wahali-ui .site-header .navlinks a,html body.wahali-ui.wahali-ui .mega-trigger{font-size:13px!important}
+@media(max-width:650px){html body.wahali-ui.wahali-ui .site-header .navlinks a,html body.wahali-ui.wahali-ui .mega-trigger{font-size:12px!important}}
