@@ -35,7 +35,7 @@ Workers 支持纯静态网站，不需要另建 Pages 项目。只发布 dist，
 
 ## 资料和发布约束
 
-当前57个款式、61组搭配。WH-W-SH-002、WH-W-SH-009及对应搭配暂停公开，保留排除规则。面料、尺码、起订量和交期按询盘确认。
+当前98个女装独立款式、66组搭配。WH-W-SH-002（6.5英寸）已恢复；WH-W-SH-009及其搭配继续排除。面料、尺码、起订量和交期按询盘确认。
 
 客户选择保存在浏览器；客户先预览，再手动用WhatsApp或邮箱发送。文件选择只在摘要中列文件名，附件需要客户随邮件或WhatsApp另行发送；没有云端文件上传。
 
@@ -45,7 +45,7 @@ Workers 支持纯静态网站，不需要另建 Pages 项目。只发布 dist，
 
 在 Mac 安装 Chrome 后运行 `python3 scripts/build-catalogue.py`；生成匹配的 PDF 与 catalogue-manifest.json，然后一起提交。此脚本不是 Cloudflare 构建命令。
 
-PDF 的绝对链接使用正式域名 https://wahaliqq.com，与独立客户选款目录一致。
+PDF 的绝对链接使用正式域名 https://www.wahaliqq.com，与独立客户选款目录一致。
 
 暂保留 noindex / robots 禁止收录，待资料确认后开放搜索收录。
 
@@ -58,3 +58,7 @@ PDF 的绝对链接使用正式域名 https://wahaliqq.com，与独立客户选�
 ## 首页调整（2026-11-08）
 
 语言入口合并为 English/EN、Spanish/ES、French/FR、Portuguese/PT，不再展示地区与国旗；定制页初始标题修正，产品详情标题跟随商品名称。Banner 文案在桌面端对齐 WOMEN。移除首页面料模块，更新流程与目录资源区。独立客户目录补充法语。新定制区仅在 custom-home-preview.html 显示，首页仍保留原定制区；经确认后再替换。PDF 已重建并将链接切换至正式域名。
+
+## 女装九类整合（2026-11-08）
+
+替换旧女装为98个独立单品、66组搭配、九类入口；Tracksuits兼容原Sets状态。恢复WH-W-SH-002的6.5英寸款，WH-W-SH-009继续排除。旧40个来源编号退出选款，旧链接显示Collection updated。运行图片来自交接包的Eagle压缩副本。首页、详情、独立询盘和PDF同步；PDF正式域名为https://www.wahaliqq.com，颜色圆点可点击，使用scripts/pdf-link-appearance.js保留无高亮链接。

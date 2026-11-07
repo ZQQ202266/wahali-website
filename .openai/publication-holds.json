@@ -1,19 +1,6 @@
 {
-  "updated_on": "2026-11-05",
+  "updated_on": "2026-11-08",
   "held_products": [
-    {
-      "website_id": "WH-W-SH-002",
-      "draft_id": "DRAFT-W-SH-002",
-      "source_style": "Impact Shorts | 6.5\"",
-      "reason": "用户要求资料保留，暂不上官网",
-      "exclude_from": [
-        "website",
-        "inquiry",
-        "pdf"
-      ],
-      "preserve_source_records": true,
-      "preserve_eagle_images": true
-    },
     {
       "website_id": "WH-W-SH-009",
       "draft_id": "DRAFT-W-SH-009",
