@@ -1,0 +1,47 @@
+/* Page-scoped styles; shared header/footer and visual-system.css remain unchanged. */
+.ci-page{max-width:1680px;margin:auto;padding:48px var(--b-display-gutter,3vw) 70px;color:#38352f;background:#faf7f1}
+.ci-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:44px;align-items:start}
+.ci-intro{padding:8px 0}.ci-kicker{display:block;font-size:11px;letter-spacing:.14em;color:#777165;margin:0 0 17px}
+body.wahali-ui .ci-page h1{font-size:36px!important;line-height:1.2!important;max-width:14ch;margin:0 0 18px}
+.ci-description{max-width:46ch;font-size:15px;line-height:1.8;color:#777165;margin:0 0 28px}
+.ci-photo{aspect-ratio:4/3;overflow:hidden;border-radius:10px;background:#ede7de;position:relative}
+.ci-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.ci-photo-label{position:absolute;bottom:14px;left:14px;padding:5px 10px;background:#fffdf9eF;border-radius:5px;font-size:11px;letter-spacing:.04em}
+.ci-reference-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:23px 0 12px}
+body.wahali-ui .ci-reference-heading h2{font-size:15px!important;margin:0}.ci-reference-heading a{font-size:12px;text-decoration:underline;text-underline-offset:4px}
+.ci-reference-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.ci-ref{display:block;border:1px solid transparent;background:transparent;color:inherit;border-radius:8px;padding:4px;cursor:pointer;text-align:left;min-width:0}
+.ci-ref img{display:block;aspect-ratio:3/4;width:100%;object-fit:cover;border-radius:6px}.ci-ref span{display:block;font-size:11px;line-height:1.6;margin-top:6px;overflow-wrap:anywhere}
+.ci-ref[aria-pressed=true]{border-color:#a97878;background:#ede7de}.ci-ref[aria-pressed=true] span:before{content:'✓ ';color:#383b32}
+.ci-reference-note{font-size:12px;color:#777165;line-height:1.7;margin:12px 0 0}
+.ci-benefits{list-style:none;padding:0;margin:25px 0 0;border-top:1px solid #ded9ce}.ci-benefits li{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid #ded9ce;font-size:13px}.ci-benefits b{font-size:11px;color:#a49c8d;font-weight:400}
+.ci-form-panel{padding:30px;background:#fffdf9;border:1px solid #ded9ce;border-radius:14px;min-width:0}
+.ci-form-heading{display:flex;align-items:baseline;gap:14px;margin-bottom:20px}body.wahali-ui .ci-form-heading h2{font-size:22px!important;margin:0}
+.ci-form{margin:0}.ci-fields{border:0;padding:0;margin:0;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px 18px}
+.ci-full{grid-column:1/-1}.ci-label{display:flex;flex-direction:column;gap:8px;min-width:0;font-size:13px;line-height:1.5;font-weight:500}.ci-label em{font-size:11px;color:#777165;font-style:normal;font-weight:400}
+.ci-form :is(input:not([type=checkbox]),select,textarea){width:100%;min-width:0;border:1px solid #d4cec2;border-radius:6px;background:#fffdf9;color:#38352f;min-height:44px;padding:11px 12px;font-size:14px;line-height:1.5;box-sizing:border-box}
+.ci-form :is(input,select,textarea):focus-visible,.ci-ref:focus-visible,.ci-upload:focus-within{outline:2px solid #777c69;outline-offset:3px}
+.ci-form textarea{min-height:108px;resize:vertical}.ci-form input::placeholder,.ci-form textarea::placeholder{color:#8c887e}
+.ci-help{font-size:11px;line-height:1.7;color:#777165;margin:0;font-weight:400}.ci-quantity-custom[hidden]{display:none!important}
+.ci-options{border:0;padding:0;margin:0;min-width:0}.ci-options legend{font-size:13px;font-weight:500;margin:0 0 10px;padding:0}
+.ci-option-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.ci-option{display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 6px;position:relative;border:1px solid #ded9ce;border-radius:7px;background:#fffdf9;font-size:12px;cursor:pointer}
+.ci-option input{appearance:none;width:13px;height:13px;border:1px solid #b5afa3;border-radius:3px;margin:0;flex:none;background:#fffdf9}
+.ci-option input:checked{background:#383b32;border-color:#383b32}.ci-option input:checked:after{content:'✓';display:block;font-size:10px;color:#fff;text-align:center;line-height:12px}
+.ci-option:has(input:checked){background:#ede7de;border-color:#a97878}.ci-option svg{width:16px;height:16px;flex:none;stroke-width:1.3}
+.ci-upload{position:relative;border:1px dashed #bcb4a6;border-radius:8px;display:flex;align-items:center;flex-direction:column;justify-content:center;text-align:center;min-height:136px;padding:18px;gap:8px;background:#faf7f1;cursor:pointer}
+.ci-upload input{position:absolute;width:1px!important;height:1px!important;min-height:0!important;padding:0!important;opacity:0}
+.ci-upload svg{width:25px;height:25px}.ci-upload strong{font-weight:500;font-size:14px}.ci-upload .ci-help{max-width:55ch}
+.ci-upload.is-dragging{background:#ede7de;border:1px solid #777c69}.ci-file-list{list-style:none;padding:0;margin:12px 0 0}
+.ci-file-list li{display:flex;align-items:center;gap:14px;justify-content:space-between;padding:10px 0;border-bottom:1px solid #ded9ce;font-size:12px}.ci-file-list span{min-width:0;overflow-wrap:anywhere}.ci-file-list small{display:block;font-size:11px;color:#777165;margin-top:2px}.ci-remove{border:0;background:transparent;padding:6px;color:#38352f;text-decoration:underline;text-underline-offset:3px;font-size:11px;cursor:pointer}
+.ci-errors{margin:10px 0 0;color:#9b554b;font-size:12px;line-height:1.7;white-space:pre-line}.ci-errors:empty{display:none}
+body.wahali-ui .ci-contact-title{font-size:16px!important;padding-top:20px;border-top:1px solid #ded9ce;margin:0}
+.ci-submit{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:48px;border:1px solid #383b32;background:#383b32;color:#fffdf9;font-size:14px;border-radius:6px;padding:12px 16px;cursor:pointer}
+.ci-submit:hover{background:#51564a}.ci-submit:disabled{opacity:.65;cursor:wait}.ci-submit svg{width:19px;height:19px}
+.ci-status{margin:14px 0 0;padding:13px 15px;border-radius:6px;font-size:13px;line-height:1.75;white-space:pre-line;scroll-margin-top:110px}
+.ci-status:empty{display:none}.ci-status[data-state=error]{background:#f4eae5;color:#78443c;border:1px solid #e2ccc3}.ci-status[data-state=success]{background:#e9ede4;color:#383b32;border:1px solid #c9d1bc}.ci-status[data-state=sending]{background:#ede7de;color:#38352f}
+.ci-availability{font-size:12px;line-height:1.75;color:#777165;margin:17px 0 0}.ci-manual{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:12px}.ci-manual button{font-size:12px;background:transparent;border:1px solid #ded9ce;border-radius:6px;color:#383b32;padding:8px 12px;cursor:pointer}
+.ci-summary{font-size:12px;line-height:1.8;white-space:pre-wrap;margin:16px 0 0;background:#faf7f1;border-radius:6px;padding:14px;max-height:260px;overflow:auto}.ci-summary[hidden]{display:none}
+@media(max-width:1100px){.ci-layout{gap:25px;grid-template-columns:minmax(0,2fr) minmax(0,3fr)}.ci-form-panel{padding:24px}.ci-option{flex-wrap:wrap;gap:5px}.ci-option-grid{gap:6px}}
+@media(max-width:850px){.ci-page{padding:28px 5% 44px}.ci-layout{grid-template-columns:1fr;gap:28px}.ci-intro{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}.ci-intro-heading{align-self:center}.ci-photo{grid-column:2;grid-row:1;aspect-ratio:3/4}.ci-intro .ci-reference-heading,.ci-intro .ci-reference-grid,.ci-intro .ci-reference-note,.ci-intro .ci-benefits{grid-column:1/-1}body.wahali-ui .ci-page h1{font-size:30px!important}.ci-description{font-size:14px;margin-bottom:0}.ci-reference-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ci-ref img{aspect-ratio:4/3}.ci-benefits{display:flex;gap:15px;margin-top:18px}.ci-benefits li{flex:1;border:0;font-size:11px;gap:7px}}
+@media(max-width:520px){.ci-page{padding-inline:20px}.ci-intro{display:block}.ci-photo{aspect-ratio:16/9;margin-top:22px}.ci-photo img{object-position:center 33%}.ci-form-panel{padding:20px}.ci-fields{grid-template-columns:1fr;gap:19px}.ci-full{grid-column:1}.ci-option-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ci-option{flex-wrap:nowrap;justify-content:flex-start;padding:11px 7px}.ci-form :is(input:not([type=checkbox]),select,textarea){font-size:16px}.ci-benefits{display:block}.ci-benefits li{padding-block:8px}.ci-reference-heading{margin-top:20px}}

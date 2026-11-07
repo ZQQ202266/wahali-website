@@ -62,3 +62,7 @@ PDF 的绝对链接使用正式域名 https://www.wahaliqq.com，与独立客户
 ## 女装九类整合（2026-11-08）
 
 替换旧女装为98个独立单品、66组搭配、九类入口；Tracksuits兼容原Sets状态。恢复WH-W-SH-002的6.5英寸款，WH-W-SH-009继续排除。旧40个来源编号退出选款，旧链接显示Collection updated。运行图片来自交接包的Eagle压缩副本。首页、详情、独立询盘和PDF同步；PDF正式域名为https://www.wahaliqq.com，颜色圆点可点击，使用scripts/pdf-link-appearance.js保留无高亮链接。
+
+## Product Customization inquiry page
+
+The new /product-customization.html and existing /customisation.html share the homepage header/footer. The responsive form supports configured quantity ranges, custom quantity, five branding options, local multi-file selection/drag/drop/removal, date and contact validation. The multipart adapter is implemented but endpoint remains empty: online submission explicitly reports not sent, and customers can still prepare a WhatsApp/email inquiry with manual attachments. No server-side receiver or third-party service has been added. See docs/custom-inquiry.md for the receiving-service contract and required backend configuration.
