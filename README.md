@@ -45,7 +45,7 @@ Workers 支持纯静态网站，不需要另建 Pages 项目。只发布 dist，
 
 在 Mac 安装 Chrome 后运行 `python3 scripts/build-catalogue.py`；生成匹配的 PDF 与 catalogue-manifest.json，然后一起提交。此脚本不是 Cloudflare 构建命令。
 
-PDF中现有绝对链接暂保留已发布的预览来源；正式域名切换验收时统一更新生成脚本 BASE 与 PDF 链接。
+PDF 的绝对链接使用正式域名 https://wahaliqq.com，与独立客户选款目录一致。
 
 暂保留 noindex / robots 禁止收录，待资料确认后开放搜索收录。
 
@@ -54,3 +54,7 @@ PDF中现有绝对链接暂保留已发布的预览来源；正式域名切换�
 ## 加载优化（2026-11-08）
 
 首页 Banner 使用 960/1672 像素 WebP，并在 HTML 提前请求；导航 Logo 为 360×240 PNG（约35 KB）。图片缓存一天，字体缓存七天；HTML、脚本及样式沿用重新验证，保证代码更新可见。以后替换图片或字体时使用新文件名并更新引用，避免浏览器继续使用旧素材。此次没有改动产品数据、客户目录内容或 PDF 内容。
+
+## 首页调整（2026-11-08）
+
+语言入口合并为 English/EN、Spanish/ES、French/FR、Portuguese/PT，不再展示地区与国旗；定制页初始标题修正，产品详情标题跟随商品名称。Banner 文案在桌面端对齐 WOMEN。移除首页面料模块，更新流程与目录资源区。独立客户目录补充法语。新定制区仅在 custom-home-preview.html 显示，首页仍保留原定制区；经确认后再替换。PDF 已重建并将链接切换至正式域名。

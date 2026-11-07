@@ -1,13 +1,13 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "products": 57,
   "core_styles": 29,
   "companions": 28,
   "looks": 61,
   "pages": 24,
-  "source_sha256": "1c919bb5466d180657f1c5c28f4416a8631d7744f895e832718007467e262868",
-  "pdf_sha256": "676fd4dd96f740b3e8ed139533be73fbfbfa094f2bbefa001dc9190084e1c570",
-  "pdf_bytes": 6481536,
+  "source_sha256": "c0c58cb0de0dcd88e1158115ca9b88cd799804288dda1a7426fd5327aeb22bae",
+  "pdf_sha256": "b3beef43eaf9261133490740207ad9c4164295754c016f2007e3c7e59e01c0b7",
+  "pdf_bytes": 6462574,
   "product_ids": [
     "WH-W-SH-001",
     "WH-W-SH-003",

@@ -7,7 +7,7 @@ from pathlib import Path
 import json,html,hashlib,subprocess,tempfile,shutil,os,datetime,base64
 from zoneinfo import ZoneInfo
 TODAY=datetime.datetime.now(ZoneInfo("Asia/Shanghai"))
-ROOT=Path(__file__).resolve().parents[1];DIST=ROOT/'dist';s=(DIST/'client-data.js').read_text();d=json.loads(s[19:].rstrip(';\n'));products=[p for p in d['products'] if p.get('referenceDraft')];byid={p['id']:p for p in products};looks=d.get('referenceLooks',[]);BASE='https://wahaliqq-design-review.mossy-charm-8419.chatgpt.site';ONLINE=BASE+'/inquiry/index.html?lang=en';h=html.escape
+ROOT=Path(__file__).resolve().parents[1];DIST=ROOT/'dist';s=(DIST/'client-data.js').read_text();d=json.loads(s[19:].rstrip(';\n'));products=[p for p in d['products'] if p.get('referenceDraft')];byid={p['id']:p for p in products};looks=d.get('referenceLooks',[]);BASE='https://wahaliqq.com';ONLINE=BASE+'/inquiry/index.html?lang=en';h=html.escape
 holds=json.loads((ROOT/'.openai/publication-holds.json').read_text()).get('held_products',[])
 held_ids={x['website_id'] for x in holds}
 assert not any(p['id'] in held_ids for p in d['products']), 'Held product reintroduced in website data'
