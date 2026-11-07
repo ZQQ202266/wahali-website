@@ -2,22 +2,27 @@
 
 WAHALI 静态官网。使用现有 Avenir Next / Manrope 字体体系，产品选款、定制需求、WhatsApp／邮件询盘；不含在线支付或后端收件。
 
-## Cloudflare Pages 首次部署
+## 当前部署：Cloudflare Workers 静态网站
 
-- GitHub repository: ZQQ202266/wahali-website
+Cloudflare 项目名：wahali-website，连接 GitHub 仓库 ZQQ202266/wahali-website。
+
 - Production branch: main
-- Framework preset: None
-- Build command: exit 0
-- Build output directory: dist
-- Root directory: 留空（仓库根目录）
+- Build command: 留空 / None
+- Deploy command: npx wrangler deploy
+- Root directory: 仓库根目录（/）
+- 静态网站目录：dist，由 wrangler.jsonc 的 assets.directory 明确指定
 
-在 Cloudflare 的 Workers & Pages 中选择创建 Pages 项目、导入此 GitHub 仓库。完成后先检查 pages.dev 地址，再绑定正式域名。保持现有网站和 DNS，直到新部署验收通过。
+Workers 支持纯静态网站，不需要另建 Pages 项目。只发布 dist，不把源码说明、内部规则和维护脚本作为网页提供。
 
-官方说明：https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
+先检查项目的 workers.dev 地址，再安排正式域名切换；保留原站和原 DNS，直到新部署验收通过。
+
+官方说明：https://developers.cloudflare.com/workers/static-assets/binding/
+
+如未来改用 Pages：preset None，build exit 0，output dist，main 分支。
 
 ## 更新方式
 
-修改 dist 下文件，检查后提交 main。配置 Git 集成后，Cloudflare 自动发布。公开前可用其他分支产生预览部署。
+修改 dist 下文件，检查后提交 main。配置 Git 集成后，Cloudflare Workers 自动发布。公开前可用其他分支产生预览部署。
 
 - 首页：dist/index.html（B 版首页）；兼容入口 b.html
 - 女装目录：dist/women.html
