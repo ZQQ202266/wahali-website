@@ -17,7 +17,7 @@
 - `dist/custom-inquiry-config.js`: public endpoint, quantity ranges, file limits and contact configuration.
 - `dist/custom-inquiry-adapter.js`: real multipart transport adapter. No fake success path.
 
-Existing standalone style files and other page components remain in the repository. The homepage customization preview remains independent and has not replaced its homepage module.
+Existing standalone style files and other page components remain in the repository. The early homepage customization preview remains independent. The production homepage entry now describes Logo, Color, Label, Material and Package and links to `/product-customization.html`; its compact layout remains consistent with the homepage. The top customization menu uses those same five options.
 
 ## Current functionality
 
