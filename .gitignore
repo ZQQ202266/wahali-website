@@ -8,7 +8,6 @@ node_modules/
 ._*
 .Trashes/
 *.log
-# Generated print source is local; retain the matching PDF and manifest.
-dist/catalogue-print.html
+# Catalogue preview uses existing runtime images and is published with the PDF.
 # Hosting identity belongs to the original preview platform.
 .openai/hosting.json

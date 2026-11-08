@@ -66,3 +66,7 @@ PDF 的绝对链接使用正式域名 https://www.wahaliqq.com，与独立客户
 ## Product Customization inquiry page
 
 The new /product-customization.html and existing /customisation.html share the homepage header/footer. The responsive form supports configured quantity ranges, custom quantity, five branding options, local multi-file selection/drag/drop/removal, date and contact validation. The multipart adapter is implemented but endpoint remains empty: online submission explicitly reports not sent, and customers can still prepare a WhatsApp/email inquiry with manual attachments. No server-side receiver or third-party service has been added. See docs/custom-inquiry.md for the receiving-service contract and required backend configuration.
+
+## Catalogue release — 2026-11-08
+
+`dist/catalogue.pdf` and the published lightweight `dist/catalogue-print.html` use the current formal product data. Revision 6 includes transparent whole-card links, inline right-aligned View details / View look links and clickable colour dots. Regenerate with `WAHALI_PUBLIC_BASE_URL="https://www.wahaliqq.com" python3 scripts/build-catalogue.py`; the script uses `scripts/pdf-link-mode.py` and records PDF/preview/data hashes in `dist/catalogue-manifest.json`. The homepage, enquiry catalogue and retained local PDF aliases continue to use the same catalogue.
