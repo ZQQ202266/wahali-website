@@ -70,3 +70,7 @@ The new /product-customization.html and existing /customisation.html share the h
 ## Catalogue release — 2026-11-08
 
 `dist/catalogue.pdf` and the published lightweight `dist/catalogue-print.html` use the current formal product data. Revision 6 includes transparent whole-card links, inline right-aligned View details / View look links and clickable colour dots. Regenerate with `WAHALI_PUBLIC_BASE_URL="https://www.wahaliqq.com" python3 scripts/build-catalogue.py`; the script uses `scripts/pdf-link-mode.py` and records PDF/preview/data hashes in `dist/catalogue-manifest.json`. The homepage, enquiry catalogue and retained local PDF aliases continue to use the same catalogue.
+
+## Search readiness — 2026-11-08
+
+Public crawl settings, per-product canonical/language metadata and `sitemap.xml` are enabled. Run `python3 scripts/build-search-indexing.py` after changing products/categories/routes. Utilities, PDFs and draft/design pages remain noindex. **The sitemap has not been submitted or advertised in robots.txt.** The intended Google account’s ownership status still needs confirmation in Search Console. See `docs/search-indexing.md`.

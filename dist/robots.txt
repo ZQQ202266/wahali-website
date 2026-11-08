@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+# Sitemap is intentionally not advertised or submitted yet.

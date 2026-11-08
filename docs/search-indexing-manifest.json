@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-08",
+  "base": "https://www.wahaliqq.com",
+  "products": 98,
+  "categories": 9,
+  "languages": [
+    "en",
+    "es",
+    "fr",
+    "pt"
+  ],
+  "sitemap_urls": 448,
+  "sitemap_submitted": false,
+  "sitemap_advertised_in_robots": false,
+  "public_templates": [
+    "index.html",
+    "b.html",
+    "women.html",
+    "catalogue/index.html",
+    "about.html",
+    "contact.html",
+    "product-customization.html",
+    "customisation.html",
+    "product/bodysuits.html",
+    "product/hoodies.html",
+    "product/jackets.html",
+    "product/leggings.html",
+    "product/shorts.html",
+    "product/sports-bras.html",
+    "product/tops.html"
+  ],
+  "excluded": [
+    "cart",
+    "inquiry",
+    "PDF",
+    "catalogue-print",
+    "preview designs",
+    "men placeholder",
+    "delivery/privacy/terms drafts",
+    "retired or unknown product references"
+  ]
+}
