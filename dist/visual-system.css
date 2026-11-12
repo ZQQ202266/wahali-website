@@ -1,4 +1,4 @@
-/* WAHALI customer-facing visual system. Load last on every customer page.
+/*  customer-facing visual system. Load last on every customer page.
    Avenir Next is a system font; Inter is the bundled cross-platform fallback.
    Use Manrope for headings. Barlow Condensed 600 belongs only to homepage banners. */
 @font-face{font-family:Manrope;src:url('fonts/manrope-400.ttf') format('truetype');font-weight:400;font-display:swap}

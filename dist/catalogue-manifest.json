@@ -1,13 +1,13 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-12",
   "products": 98,
   "core_styles": 98,
   "companions": 0,
   "looks": 66,
   "pages": 31,
-  "source_sha256": "d78f966047399e0695955edd3b0a7c77ddbb65915e5f6ad1bd76fdd00453d2ee",
-  "pdf_sha256": "ac15c2bfdd1ff26620a0e1128c54fad79f1ffd67c991bd5e404e6c95c09f63aa",
-  "pdf_bytes": 14639156,
+  "source_sha256": "55691ce50f3af428f9916cb8a7c7d97c63eb045f9ea22fadffa8696bcf1efb11",
+  "pdf_sha256": "2c599553dee9b54d1ae5b59ead6f0eb8f9dfc69ab323a7b1708d45053c28403a",
+  "pdf_bytes": 14657835,
   "product_ids": [
     "WH-W-SH-010",
     "WH-W-SH-005",
@@ -176,8 +176,8 @@
     "WH-LOOK-066",
     "WH-LOOK-067"
   ],
-  "print_sha256": "6bd18f5dcce93b09eff5b6fcfeeb668d74d674761de441410e8fc08c250f7707",
-  "print_bytes": 341186,
+  "print_sha256": "a463ac62e8d78462038abecee3522981d94f82a639f26dcd11245452cd8c5e71",
+  "print_bytes": 342814,
   "catalogue_revision": 6,
   "link_layout": "transparent_whole_card_and_right_aligned_details",
   "colour_display": "clickable_dots",

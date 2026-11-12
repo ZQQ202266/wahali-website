@@ -3,8 +3,8 @@
  */
 (()=>{'use strict';
 const BASE='https://www.wahaliqq.com',LANGS=['en','es','fr','pt'];
-const titles={en:{home:'Women’s Activewear',women:'Women’s Activewear Collection',about:'About WAHALI',contact:'Contact WAHALI',custom:'Product Customization'},es:{home:'Ropa deportiva para mujer',women:'Colección de ropa deportiva para mujer',about:'Acerca de WAHALI',contact:'Contacta con WAHALI',custom:'Personalización de productos'},fr:{home:'Vêtements de sport pour femmes',women:'Collection de vêtements de sport pour femmes',about:'À propos de WAHALI',contact:'Contacter WAHALI',custom:'Personnalisation de produits'},pt:{home:'Moda esportiva feminina',women:'Coleção de moda esportiva feminina',about:'Sobre a WAHALI',contact:'Entre em contato com a WAHALI',custom:'Personalização de produtos'}};
-const descriptions={en:'Explore WAHALI women’s activewear and reference colours. Discuss styles, quantities and customization with our team in Shenzhen.',es:'Explora la ropa deportiva femenina y los colores de referencia de WAHALI. Consulta estilos, cantidades y personalización con nuestro equipo en Shenzhen.',fr:'Découvrez les vêtements de sport féminins et les couleurs de référence WAHALI. Échangez avec notre équipe à Shenzhen sur les modèles, quantités et personnalisations.',pt:'Explore a moda esportiva feminina e as cores de referência WAHALI. Consulte modelos, quantidades e personalização com nossa equipe em Shenzhen.'};
+const titles={en:{home:'Women’s Activewear',women:'Women’s Activewear Collection',about:'About us',contact:'Contact us',custom:'Product Customization'},es:{home:'Ropa deportiva para mujer',women:'Colección de ropa deportiva para mujer',about:'Acerca de nosotros',contact:'Contacta con nosotros',custom:'Personalización de productos'},fr:{home:'Vêtements de sport pour femmes',women:'Collection de vêtements de sport pour femmes',about:'À propos de nous',contact:'Nous contacter',custom:'Personnalisation de produits'},pt:{home:'Moda esportiva feminina',women:'Coleção de moda esportiva feminina',about:'Sobre nós',contact:'Entre em contato com a ',custom:'Personalização de produtos'}};
+const descriptions={en:'Explore women’s activewear and reference colours. Discuss styles, quantities and customization with our team in Shenzhen.',es:'Explora la ropa deportiva femenina y los colores de referencia de nuestra colección. Consulta estilos, cantidades y personalización con nuestro equipo en Shenzhen.',fr:'Découvrez les vêtements de sport féminins et les couleurs de référence. Échangez avec notre équipe à Shenzhen sur les modèles, quantités et personnalisations.',pt:'Explore a moda esportiva feminina e as cores de referência. Consulte modelos, quantidades e personalização com nossa equipe em Shenzhen.'};
 function canonicalURL(path,lang,extra={}){const u=new URL(path,BASE);if(lang!=='en')u.searchParams.set('lang',lang);for(const[k,v]of Object.entries(extra))u.searchParams.set(k,v);return u.href}
 function meta(name,content){let e=document.head.querySelector('meta[name="'+name+'"]');if(!e){e=document.createElement('meta');e.name=name;document.head.append(e)}e.content=content}
 window.updateWahaliSearchIndexing=({page,design,lang,product})=>{
@@ -30,7 +30,7 @@ window.updateWahaliSearchIndexing=({page,design,lang,product})=>{
  for(const alt of [...LANGS,'x-default']){const e=document.createElement('link');e.rel='alternate';e.hreflang=alt;e.href=canonicalURL(path,alt==='x-default'?'en':alt,extra);document.head.append(e)}
  const local=titles[lang],category=extra.category?(D.translations[extra.category]?.[lang]||extra.category):null;
  const label=page==='product'?(product.titleTranslations?.[lang]||product.name)+' | '+product.id:category||local[key];
- document.title=label+' | WAHALI';
+ document.title=label+'';
  meta('description',page==='product'?label+'. '+descriptions[lang]:descriptions[lang]);
 };
 })();

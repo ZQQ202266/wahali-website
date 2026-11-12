@@ -20,6 +20,7 @@ for label in d.get('womenCategories',[]):
  for i in range(0,len(items),6):pages.append((label,'products',items[i:i+6]))
 for i in range(0,len(looks),6):pages.append(('Style pairings','looks',looks[i:i+6]))
 PHOTO_CACHE={}
+BRAND_DATA='data:image/png;base64,'+base64.b64encode((DIST/'brand/wahali-w-mark.png').read_bytes()).decode()
 def photo(p,c=None):
  src=DIST/'catalogue'/(c or p['referenceColors'][0])['images'][0]
  if str(src) not in PHOTO_CACHE:
@@ -40,7 +41,7 @@ def icon(key):
 def footer(n,total):
  rows=[('whatsapp','WhatsApp','+852 9460 3714','https://wa.me/85294603714'),('email','Email','zqq202266@gmail.com','mailto:zqq202266@gmail.com'),('web','Website','www.wahaliqq.com',BASE),('location','Location','Shenzhen, China','')]
  contacts=''.join('<div class="contact-row">'+icon(k)+'<span class="contact-label">'+label+'</span>'+('<a href="'+h(url)+'">'+h(value)+'</a>' if url else '<span>'+h(value)+'</span>')+'</div>' for k,label,value,url in rows)
- return '<footer class="footer"><div class="footer-row"><div class="contact-stack">'+contacts+'</div><div class="footer-page"><span class="footer-brand">WAHALI</span><span>'+str(n).zfill(2)+' / '+str(total).zfill(2)+'</span></div></div><p class="footer-note">Colour dots are visual references. Final shades, specifications and supply are confirmed on enquiry.</p></footer>'
+ return '<footer class="footer"><div class="footer-row"><div class="contact-stack">'+contacts+'</div><div class="footer-page"><img class="pdf-brand-mark" src="'+BRAND_DATA+'" alt=""><span>'+str(n).zfill(2)+' / '+str(total).zfill(2)+'</span></div></div><p class="footer-note">Colour dots are visual references. Final shades, specifications and supply are confirmed on enquiry.</p></footer>'
 def colour_hex(name):
  return d['colourSwatches'].get(name,'#92918E')
 def swatches(colors,urlfn):
@@ -65,13 +66,14 @@ styles='''@font-face{font-family:Manrope;src:url('fonts/manrope-500.ttf') format
 styles+='''
 .reference-row{display:flex;justify-content:space-between;align-items:baseline;gap:2mm;margin:.7mm 0 0}.reference-row .ref{margin:0}.reference-row .style-link{font-size:7pt;line-height:1.3;margin:0;color:#726b61;white-space:nowrap;position:relative;z-index:2}.card{position:relative}.card-hit{position:absolute;inset:0;z-index:1;display:block;background:transparent!important;border:0!important;box-shadow:none!important;opacity:1!important}.card-hit:hover,.card-hit:active{background:transparent!important;filter:none!important;box-shadow:none!important;opacity:1!important}.colour-dots{position:relative;z-index:2;pointer-events:none}.colour-dot{pointer-events:auto}.style-link a{text-decoration:none;background:transparent}.style-link a:hover{background:transparent;color:inherit}.grid{grid-template-rows:repeat(2,101mm);gap:5mm 5mm}.photo{height:70mm;aspect-ratio:auto}.card h3{margin:2mm 0 .7mm;min-height:4.5mm;line-height:1.3}.meta{margin:.7mm 0 0}.colour-dots{display:flex;flex-wrap:wrap;gap:1.05mm;margin-top:1.4mm;align-content:flex-start;max-width:100%;min-height:3.2mm}.colour-dot{display:block;flex:0 0 3.1mm;width:3.1mm;height:3.1mm;border:.2mm solid rgba(62,57,48,.26);border-radius:50%;box-shadow:inset 0 0 0 .15mm rgba(255,255,255,.35);print-color-adjust:exact;-webkit-print-color-adjust:exact}.footer{padding-top:3mm}.footer-row{align-items:flex-end;gap:5mm}.contact-stack{display:flex;flex-direction:column;gap:1.1mm}.contact-row{display:grid;grid-template-columns:3mm 16mm auto;align-items:center;column-gap:2mm;font-size:7pt;line-height:1.2}.contact-row svg{width:3mm;height:3mm;display:block}.contact-label{color:#726b61}.footer-page{display:flex;flex-direction:column;align-items:flex-end;gap:2mm;white-space:nowrap}.footer-brand{letter-spacing:1.8px;font-size:8pt}.footer-note{font-size:6.4pt;line-height:1.4;margin:2mm 0 0;color:#726b61}.cover .lead{margin:3mm 0}.cover-gallery{margin:6mm 0 5mm}.cover-gallery img{max-height:74mm}.cover .instructions{padding:4mm}.cover .note{margin:2mm 0}.cover h1{margin:10mm 0 5mm}
 '''
+styles+='\n.pdf-brand-mark{width:22mm;height:auto;object-fit:contain}.footer-page .pdf-brand-mark{width:12mm}.cover>.pdf-brand-mark{width:30mm;margin-top:5mm}\n'
 # Use the retained site font only when present; system Avenir Next is the fallback.
 styles=styles.replace('manrope-variable-latin.woff2','manrope-latin.woff2') if (DIST/'fonts/manrope-latin.woff2').exists() else styles
-out='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WAHALI — Activewear Product Catalogue</title><style>'+styles+'</style><body><div class="tools"><button onclick="window.print()">Print / save PDF</button></div>'
+out='<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Activewear Product Catalogue</title><style>'+styles+'</style><body><div class="tools"><button onclick="window.print()">Print / save PDF</button></div>'
 total=len(pages)+1
-out+='<section class="page cover"><div class="eyebrow">WAHALI / ACTIVEWEAR</div><div class="brand">WAHALI</div><h1>Movement,<br>in your own way.</h1><p class="lead">Women’s activewear catalogue</p><p class="note">'+str(len(products))+' women’s styles · '+str(len(looks))+' style pairings<br>English selection · No prices · Updated '+TODAY.strftime('%d %B %Y')+'</p><div class="cover-gallery">'+''.join('<img src="'+h(photo(byid[id]))+'" alt="'+h(byid[id]['name'])+'">' for id in ['WH-W-SH-001','WH-W-PT-001','WH-W-UP-014'])+'</div><div class="instructions">Choose the styles you like and send us the reference codes, quantities and destination country.<br><a href="'+ONLINE+'">View all colours and angles in the online selection catalogue.</a></div><p class="note">Reference imagery and styles are for product discussions. Supply, fabric, sizing, customisation, prices and delivery must be confirmed for your enquiry. Pairings show separate pieces.</p>'+footer(1,total)+'</section>'
+out+='<section class="page cover"><div class="eyebrow">ACTIVEWEAR</div><img class="pdf-brand-mark" src="'+BRAND_DATA+'" alt=""><h1>Movement,<br>in your own way.</h1><p class="lead">Women’s activewear catalogue</p><p class="note">'+str(len(products))+' women’s styles · '+str(len(looks))+' style pairings<br>English selection · No prices · Updated '+TODAY.strftime('%d %B %Y')+'</p><div class="cover-gallery">'+''.join('<img src="'+h(photo(byid[id]))+'" alt="'+h(byid[id]['name'])+'">' for id in ['WH-W-SH-001','WH-W-PT-001','WH-W-UP-014'])+'</div><div class="instructions">Choose the styles you like and send us the reference codes, quantities and destination country.<br><a href="'+ONLINE+'">View all colours and angles in the online selection catalogue.</a></div><p class="note">Reference imagery and styles are for product discussions. Supply, fabric, sizing, customisation, prices and delivery must be confirmed for your enquiry. Pairings show separate pieces.</p>'+footer(1,total)+'</section>'
 for n,(label,kind,items) in enumerate(pages,2):
- out+='<section class="page"><header><div><span class="eyebrow">WAHALI / PRODUCT SELECTION</span><h2>'+h(label)+'</h2></div><span class="brand">WAHALI</span></header><div class="grid">'+''.join(card(v) if kind=='products' else lookcard(v) for v in items)+'</div>'+footer(n,total)+'</section>'
+ out+='<section class="page"><header><div><span class="eyebrow">PRODUCT SELECTION</span><h2>'+h(label)+'</h2></div><img class="pdf-brand-mark" src="'+BRAND_DATA+'" alt=""></header><div class="grid">'+''.join(card(v) if kind=='products' else lookcard(v) for v in items)+'</div>'+footer(n,total)+'</section>'
 out+='</body></html>'
 if not BASE:out=re.sub(r'<a href="[^"]*">','<span>',out).replace('</a>','</span>')
 path=DIST/'catalogue-print.html';path.write_text(out)
@@ -92,7 +94,7 @@ if _mode_result.returncode:raise RuntimeError(_mode_result.stderr)
 _mode_pdf.replace(DIST/'catalogue.pdf')
 # Publish a lightweight preview using existing runtime images after PDF export.
 # Keep embedded print images only in memory for the export; avoid a 21 MB HTML download.
-preview=out
+preview=out.replace(BRAND_DATA,'brand/wahali-w-mark.png')
 for source,embedded in PHOTO_CACHE.items():
  preview=preview.replace(embedded,Path(source).relative_to(DIST).as_posix())
 path.write_text(preview)
@@ -107,7 +109,7 @@ for folder,filename in aliases:
  if target.is_dir():shutil.copy2(DIST/'catalogue.pdf',target/filename)
 book=LOCAL/'15_英文产品目录册_V01_2026-11-03'
 if book.is_dir():
- (book/'index.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WAHALI Product Catalogue</title><style>body{margin:0;background:#faf7f1;color:#38352f;font:14px Arial}header{padding:18px 4%;display:flex;gap:20px;align-items:center;flex-wrap:wrap}a{color:inherit}iframe{display:block;border:0;width:100%;height:calc(100vh - 75px)}</style><header><strong>WAHALI · Product catalogue</strong><a href="Activewear_Catalogue_REVIEW.pdf">Open / download PDF</a><a href="'+ONLINE+'">Online selection</a><span>'+str(total)+' pages · '+TODAY.strftime('%Y-%m-%d')+'</span></header><iframe title="WAHALI product catalogue" src="Activewear_Catalogue_REVIEW.pdf"></iframe></html>')
+ (book/'index.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title> Product Catalogue</title><style>body{margin:0;background:#faf7f1;color:#38352f;font:14px Arial}header{padding:18px 4%;display:flex;gap:20px;align-items:center;flex-wrap:wrap}a{color:inherit}iframe{display:block;border:0;width:100%;height:calc(100vh - 75px)}</style><header><strong>Product catalogue</strong><a href="Activewear_Catalogue_REVIEW.pdf">Open / download PDF</a><a href="'+ONLINE+'">Online selection</a><span>'+str(total)+' pages · '+TODAY.strftime('%Y-%m-%d')+'</span></header><iframe title=" product catalogue" src="Activewear_Catalogue_REVIEW.pdf"></iframe></html>')
  (book/'选款来源索引.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
  import csv
  with (book/'目录册产品索引.csv').open('w',encoding='utf-8-sig',newline='') as f:
