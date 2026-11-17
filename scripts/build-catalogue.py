@@ -39,7 +39,7 @@ ICONS={
 def icon(key):
  return '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">'+ICONS[key]+'</svg>'
 def footer(n,total):
- rows=[('whatsapp','WhatsApp','+852 9460 3714','https://wa.me/85294603714'),('email','Email','zqq202266@gmail.com','mailto:zqq202266@gmail.com'),('web','Website','www.hkdfyne.com',BASE),('location','Location','Shenzhen, China','')]
+ rows=[('whatsapp','WhatsApp','+852 9460 3714','https://wa.me/85294603714'),('email','Email','HKDFYNE@gmail.com','mailto:HKDFYNE@gmail.com'),('web','Website','www.hkdfyne.com',BASE),('location','Location','Shenzhen, China','')]
  contacts=''.join('<div class="contact-row">'+icon(k)+'<span class="contact-label">'+label+'</span>'+('<a href="'+h(url)+'">'+h(value)+'</a>' if url else '<span>'+h(value)+'</span>')+'</div>' for k,label,value,url in rows)
  return '<footer class="footer"><div class="footer-row"><div class="contact-stack">'+contacts+'</div><div class="footer-page"><img class="pdf-brand-mark" src="'+BRAND_DATA+'" alt=""><span>'+str(n).zfill(2)+' / '+str(total).zfill(2)+'</span></div></div><p class="footer-note">Colour dots are visual references. Final shades, specifications and supply are confirmed on enquiry.</p></footer>'
 def colour_hex(name):

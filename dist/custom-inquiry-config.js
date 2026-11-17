@@ -17,5 +17,5 @@ window.WAHALI_CUSTOM_INQUIRY_CONFIG = {
     {value: 'over-1000', label: 'Over 1000 pieces'},
     {value: 'custom', label: 'Custom Quantity'}
   ],
-  contact: {email: 'zqq202266@gmail.com', whatsapp: '85294603714'}
+  contact: {email: 'HKDFYNE@gmail.com', whatsapp: '85294603714'}
 };

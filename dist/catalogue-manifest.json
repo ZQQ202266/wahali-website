@@ -5,9 +5,9 @@
   "companions": 0,
   "looks": 66,
   "pages": 31,
-  "source_sha256": "55691ce50f3af428f9916cb8a7c7d97c63eb045f9ea22fadffa8696bcf1efb11",
-  "pdf_sha256": "1ddbb464ccf922adc6ea15eb5fe9a5eba1fe12e4217ea4ce0e883710e6b352d4",
-  "pdf_bytes": 14655924,
+  "source_sha256": "befdb2aa327c45750b8aecc89df37d5436c9a2eba35a44a38c88a731d22dd72b",
+  "pdf_sha256": "d075ae95ba5c4027af05fb44ec063d3ccaa84d6fea0626790a3b31c2d01951b6",
+  "pdf_bytes": 14656773,
   "product_ids": [
     "WH-W-SH-010",
     "WH-W-SH-005",
@@ -176,8 +176,8 @@
     "WH-LOOK-066",
     "WH-LOOK-067"
   ],
-  "print_sha256": "6917d360a41df68f8c43b0ca9fd9ff38ff28902ed2b1cab270e3d46173578cf6",
-  "print_bytes": 341684,
+  "print_sha256": "babf343747907c62dc3e6438fbd09fad8ff18fae780b452f9314f8b7b75f078f",
+  "print_bytes": 341560,
   "catalogue_revision": 6,
   "link_layout": "transparent_whole_card_and_right_aligned_details",
   "colour_display": "clickable_dots",
