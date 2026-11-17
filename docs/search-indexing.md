@@ -32,7 +32,7 @@ References:
 
 `python3 scripts/build-search-indexing.py` regenerates `dist/sitemap.xml`, public template robot/script tags, `dist/robots.txt` and `docs/search-indexing-manifest.json` from formal product data. 112 distinct page/category/product entities × 4 languages = 448 unique URLs. The generator does not change product data, PDFs, pictures, contacts or site styling.
 
-The sitemap is accessible at https://www.wahaliqq.com/sitemap.xml but **has not been submitted**. Its URL is deliberately not advertised in robots.txt pending the owner’s separate submission instruction. Publishing crawl permissions allows organic discovery; it does not guarantee Google indexing and cannot prevent discovery until manual submission.
+The sitemap is accessible at https://www.hkdfyne.com/sitemap.xml but **has not been submitted**. Its URL is deliberately not advertised in robots.txt pending the owner’s separate submission instruction. Publishing crawl permissions allows organic discovery; it does not guarantee Google indexing and cannot prevent discovery until manual submission.
 
 ## Verification and remaining owner step
 

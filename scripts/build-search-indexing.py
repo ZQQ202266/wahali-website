@@ -4,7 +4,7 @@ from pathlib import Path
 import json,re,xml.etree.ElementTree as ET
 import datetime
 from zoneinfo import ZoneInfo
-ROOT=Path(__file__).resolve().parents[1];DIST=ROOT/'dist';BASE='https://www.wahaliqq.com'
+ROOT=Path(__file__).resolve().parents[1];DIST=ROOT/'dist';BASE='https://www.hkdfyne.com'
 s=(DIST/'client-data.js').read_text();data=json.loads(s[19:].rstrip(';\n'))
 products=data['products'];held={p['website_id'] for p in json.loads((ROOT/'.openai/publication-holds.json').read_text())['held_products']}
 assert not held.intersection(p['id'] for p in products)

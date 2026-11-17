@@ -2,7 +2,7 @@
  * No search-engine submission, analytics or external requests are performed here.
  */
 (()=>{'use strict';
-const BASE='https://www.wahaliqq.com',LANGS=['en','es','fr','pt'];
+const BASE='https://www.hkdfyne.com',LANGS=['en','es','fr','pt'];
 const titles={en:{home:'Women’s Activewear',women:'Women’s Activewear Collection',about:'About us',contact:'Contact us',custom:'Product Customization'},es:{home:'Ropa deportiva para mujer',women:'Colección de ropa deportiva para mujer',about:'Acerca de nosotros',contact:'Contacta con nosotros',custom:'Personalización de productos'},fr:{home:'Vêtements de sport pour femmes',women:'Collection de vêtements de sport pour femmes',about:'À propos de nous',contact:'Nous contacter',custom:'Personnalisation de produits'},pt:{home:'Moda esportiva feminina',women:'Coleção de moda esportiva feminina',about:'Sobre nós',contact:'Entre em contato com a ',custom:'Personalização de produtos'}};
 const descriptions={en:'Explore women’s activewear and reference colours. Discuss styles, quantities and customization with our team in Shenzhen.',es:'Explora la ropa deportiva femenina y los colores de referencia de nuestra colección. Consulta estilos, cantidades y personalización con nuestro equipo en Shenzhen.',fr:'Découvrez les vêtements de sport féminins et les couleurs de référence. Échangez avec notre équipe à Shenzhen sur les modèles, quantités et personnalisations.',pt:'Explore a moda esportiva feminina e as cores de referência. Consulte modelos, quantidades e personalização com nossa equipe em Shenzhen.'};
 function canonicalURL(path,lang,extra={}){const u=new URL(path,BASE);if(lang!=='en')u.searchParams.set('lang',lang);for(const[k,v]of Object.entries(extra))u.searchParams.set(k,v);return u.href}
